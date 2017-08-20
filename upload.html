@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="prepApp">  
+  <head>  
+    <title>File upload</title>  
+    <script src="/angular.js"></script>
+    <script src="/jquery.js"></script>
+    <script src="/main.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
+</head>
+
+<body>
+<header>
+  <div class="logo"><img src=""></div>
+  <div class="tabs">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/download">Search</a></li>
+      <li><a href="/upload">Upload</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<div id="mainupload" ng-controller="uploadController">
+  <div class="uploadformheader">
+    <span>Upload Form</span>
+  </div>
+  <div class="uploadformmain">
+    <form id="uploadForm" enctype="multipart/form-data" method="post">
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Course Name</label>
+    </div>
+    <input type="text" ng-model="formData.courseName" required>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Course Code</label>
+    </div>
+    <select ng-model="formData.department" required>
+       <option>AE</option>
+       <option>ART</option>
+       <option>BSE</option>
+       <option>CE</option>
+       <option>CHE</option>
+       <option>CHM</option>
+       <option>CS</option>
+       <option>DES</option>
+       <option>ECO</option>
+       <option>EE</option>
+       <option>EEM</option>
+       <option>ENG</option>
+       <option>ES</option>
+       <option>ESC</option>
+       <option>ESO</option>
+       <option>IME</option>
+       <option>PHY</option>
+       <option>LIF</option>
+       <option>LT</option>
+       <option>MBA</option>
+       <option  selected = 'selected'>ME</option>
+       <option>MSE</option>
+       <option>MSO</option>
+       <option>MTH</option>
+       <option>NT</option>
+       <option>PHI</option>
+       <option>PHY</option>
+       <option>PSY</option>
+       <option>SE</option>
+       <option>SOC</option>
+       <option>TA</option>
+    </select>
+    <input type="number" ng-model="formData.courseCode" required>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Category</label>
+    </div>
+    <select ng-model="formData.category" required>
+      <option>Assignment</option>
+      <option>Quiz</option>
+      <option>Mid Sem</option>
+      <option>End Sem</option>
+      <option>E-Book</option>
+      <option>Other</option>
+    </select><br>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Year</label>
+    </div>
+    <input type="number" min="1959" max="2099" ng-model="formData.year" required>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Professor</label>
+    </div>
+    <input type="text" ng-model="formData.professor" required>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Deatails</label>
+    </div>
+    <input type="text" ng-model="formData.details" required>
+    </div>
+
+    <div class="uploadelement">
+    <div class="uploadlabel">
+    <label>Choose File</label>
+    </div>
+    <input type="file" ng-model="formData.myfile" required>
+    </div>
+    <div class="uploadelement uploadsubmit">
+    <input type="submit" value="Submit" name="submit" ng-click="update()">
+    </div>
+    <span id="status">{{uploadstatus}}</span>
+    </form>
+  </div>
+  
+</div>
+      <!-- <h1>Prep File Upload:</h1>  
+      <form id="uploadForm" enctype="multipart/form-data" action="/uploadfile" method="post">
+        <label>Write department code:</label><br/><br/>
+        <input type="text" name="dept"><br/><br/>
+        <label>Write course code:</label><br/><br/>
+        <input type="number" name="code"><br/><br/>
+        <label>Write type:</label><br/><br/>
+        <input type="text" name="contenttype"><br/><br/>
+        <label>Upload file</label>
+       <input type="file" name="myfile" /><br/><br/>  
+       <input type="submit" value="Submit" name="submit"><br/><br/>  
+       <span id="status"></span>  
+      </form> -->  
+  </body>  
+</html>  

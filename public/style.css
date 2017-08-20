@@ -1,0 +1,150 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	height: 60px;
+    background-color: #21323a;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    z-index: 10;
+}
+.logo{
+	width: 15%;
+	position: relative;
+	display: inline-block;
+}
+.logo>img{
+	width: 100px;
+	height: 50px;
+	float: right;
+    padding: 5px;
+}
+.tabs{
+	width: 85%;
+	float: right;
+	position: relative;
+	display: inline-block;
+}
+.tabs>ul{
+	list-style-type: none;
+	display: inline-flex;
+	float: right;
+	padding-right: 10%;
+}
+.tabs>ul>li{
+	padding: 0px 8px;
+}
+.tabs>ul>li>a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.2em;
+    font-style: inherit;
+    font-family: sans-serif;
+}
+#mainupload{
+	width: 70%;
+	margin: auto;
+	position: relative;
+	/*top: 63px;*/
+}
+#uploadForm{
+	width: 450px;
+    background-color: red;
+    margin: auto;
+}
+.uploadformheader{
+	text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 30px;
+}
+.uploadformmain{
+	text-align: center;
+}
+.uploadelement{
+	width: 380px;
+    display: inline-flex;
+    text-align: center;
+    padding: 7px;
+}
+.uploadlabel{
+	width: 120px;
+	font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 2px;
+}
+.uploadsubmit{
+	padding-left: 160px;
+}
+
+/*Download css*/
+#maindownload{
+	width: 70%;
+	margin: auto;
+	position: relative;
+	/*top: 63px;*/
+}
+#downloadForm{
+	width: 96%;
+	padding:2%;
+    background-color: red;
+    margin: auto;
+}
+.downloadformheader{
+	text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.downloadformmain{
+	text-align: center;
+}
+.downloadelement{
+    display: inline-flex;
+    text-align: center;
+    padding: 7px;
+}
+.downloadlabel{
+	width: 120px;
+	font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 2px;
+}
+.downloadsubmit{
+	width: 80px;
+}
+.filemanage{
+	width: 70%;
+	margin: auto;
+	position: relative;
+	/*top: 70px;*/
+}
+table{
+	width: 100%;/*
+	border-style: dashed*/;
+}
+.about{
+	width: 80%;
+	margin: auto;
+	background-color: blue;
+	height: 500px;
+	position: relative;
+	/*top: 70px;*/
+}
+.home{
+	width: 80%;
+	margin: auto;
+	background-color: blue;
+	height: 500px;
+	position: relative;
+	/*top: 70px;*/
+}

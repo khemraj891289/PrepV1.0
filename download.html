@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="prepApp">  
+  <head>  
+    <title>File Search</title>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="/jquery.js"></script>
+    <script src="/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
+  </head>  
+<body ng-controller="searchController">
+<header>
+  <div class="logo"><img src=""></div>
+  <div class="tabs">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/download">Search</a></li>
+      <li><a href="/upload">Upload</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<div id="maindownload" enctype="multipart/form-data" >
+  <div class="downloadformheader">
+    <span>Find whatever you want!</span>
+  </div>
+  <div class="downloadformmain">
+  <form  id="downloadForm" method="post">
+      <div class="downloadelement">
+      <div class="downloadlabel">
+      <label>Course Code</label>
+      </div>
+      <select ng-model="formData.department" required>
+         <option>AE</option>
+         <option>ART</option>
+         <option>BSE</option>
+         <option>CE</option>
+         <option>CHE</option>
+         <option>CHM</option>
+         <option>CS</option>
+         <option>DES</option>
+         <option>ECO</option>
+         <option>EE</option>
+         <option>EEM</option>
+         <option>ENG</option>
+         <option>ES</option>
+         <option>ESC</option>
+         <option>ESO</option>
+         <option>IME</option>
+         <option>PHY</option>
+         <option>LIF</option>
+         <option>LT</option>
+         <option>MBA</option>
+         <option  selected = 'selected'>ME</option>
+         <option>MSE</option>
+         <option>MSO</option>
+         <option>MTH</option>
+         <option>NT</option>
+         <option>PHI</option>
+         <option>PHY</option>
+         <option>PSY</option>
+         <option>SE</option>
+         <option>SOC</option>
+         <option>TA</option>
+      </select>
+      <input type="number" ng-model="formData.courseCode" required>
+    </div>
+
+    <div class="downloadelement">
+    <div class="downloadlabel">
+    <label>Category</label>
+    </div>
+    <select ng-model="formData.category" required>
+      <option>Assignment</option>
+      <option>Quiz</option>
+      <option>Mid Sem</option>
+      <option>End Sem</option>
+      <option>E-Book</option>
+      <option>Other</option>
+    </select><br>
+    </div>
+
+    <div class="downloadelement">
+    <div class="downloadlabel">
+    <label>Year</label>
+    </div>
+    <input type="number" min="1959" max="2099" ng-model="formData.year" required>
+    </div>
+
+    <div class="downloadelement downloadsubmit">
+    <input ng-click = "find()" type="submit" value="Search" name="submit">
+    </div>
+  </form>
+  </div>
+  <span id="status">{{getstatus}}</span>
+</div>
+<div class="filemanage"> 
+    <table border="1">
+    <tr ng-repeat="x in results">
+          <td>{{result.courseName}}</td>
+          <td>{{result.department}}{{result.courseCode}}</td>
+          <td>{{result.category}}</td>
+          <td>{{result.year}}</td>
+          <td>{{result.professor}}</td>
+          <td>{{result.details}}</td>
+          <td>{{result.filename}}</td>
+    </tr>
+</table>
+</div>
+  </body>  
+</html>  
